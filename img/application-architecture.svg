@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="1030" viewBox="0 0 1280 1030" role="img" aria-labelledby="title desc">
+<title id="title">Contract Creator application architecture</title>
+<desc id="desc">Staff use the Django application for preparation and pricing, issuance and revisions, permissions, and receipt/signature follow-up. ERP reference data and maintained rules inform preparation. SQLite stores records and version snapshots. Word templates feed document assembly; Microsoft Graph converts and archives issued PDFs in OneDrive.</desc>
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1L9 5L1 9" fill="none" stroke="#247BA4" stroke-width="1.7" stroke-linejoin="round"/></marker>
+  <linearGradient id="hub" x2="1" y2="1"><stop stop-color="#102B46"/><stop offset="1" stop-color="#174B64"/></linearGradient>
+</defs>
+<rect width="1280" height="1030" rx="14" fill="#F5F8FC"/>
+
+<text x="45" y="38" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600" fill="#60788C" text-anchor="start">Reference data &amp; rules</text>
+<path d="M330 33H1235" fill="none" stroke="#DAE5EE" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+<text x="45" y="303" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600" fill="#60788C" text-anchor="start">Application</text>
+<path d="M330 298H1235" fill="none" stroke="#DAE5EE" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+<text x="45" y="780" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600" fill="#60788C" text-anchor="start">Documents</text>
+<path d="M330 775H1235" fill="none" stroke="#DAE5EE" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M50 105V82Q50 72 60 72H155L176 92H370Q380 92 380 102V250H50Z" fill="#E0F1F7" stroke="#8CA7BD" stroke-width="1.5"/>
+<rect x="50" y="109" width="330" height="141" rx="10" fill="white" stroke="#A7BDCF"/>
+<g transform="translate(70,128)" fill="none" stroke="#1688A6" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="2" width="23" height="16" rx="2"/><path d="M13 18V24M7 24H19M6 7H19M6 12H14"/></g>
+<text x="113" y="151" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="600" fill="#102B46" text-anchor="start">ERP reference data</text>
+<text x="70" y="188" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="400" fill="#37536D" text-anchor="start">Clients · equipment · modalities</text>
+<rect x="960" y="92" width="270" height="158" rx="10" fill="white" stroke="#A7BDCF"/>
+<g transform="translate(980,110)" fill="none" stroke="#1688A6" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="1" width="20" height="25" rx="3"/><path d="M7 6H19M7 12H10M15 12H19M7 17H10M15 17H19M7 22H10M15 22H19"/></g>
+<text x="1023" y="134" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="600" fill="#102B46" text-anchor="start">Pricing rules</text>
+<text x="980" y="174" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" fill="#37536D" text-anchor="start">Client profile · contract type</text>
+<rect x="50" y="405" width="300" height="195" rx="10" fill="white" stroke="#A7BDCF"/>
+<path d="M50 441H350" fill="none" stroke="#C4D6E4" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="69" cy="423" r="3" fill="#92ACBF"/>
+<circle cx="81" cy="423" r="3" fill="#92ACBF"/>
+<circle cx="93" cy="423" r="3" fill="#92ACBF"/>
+<rect x="112" y="415" width="216" height="14" rx="4" fill="#EDF3F8" stroke="none"/>
+<rect x="70" y="463" width="42" height="110" rx="5" fill="#E6F1F7" stroke="none"/>
+<path d="M80 478H102" fill="none" stroke="#7CAFC8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M80 494H102" fill="none" stroke="#7CAFC8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M80 510H102" fill="none" stroke="#7CAFC8" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
+<text x="129" y="485" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="600" fill="#102B46" text-anchor="start">Staff interface</text>
+<text x="129" y="519" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600" fill="#247BA4" text-anchor="start">Templates · HTMX</text>
+<text x="129" y="550" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" fill="#37536D" text-anchor="start">Tailwind CSS</text>
+<rect x="450" y="330" width="400" height="370" rx="18" fill="url(#hub)" stroke="#102B46"/>
+<rect x="474" y="352" width="45" height="45" rx="10" fill="#1C536A" stroke="none"/>
+<g transform="translate(484,360)" fill="none" stroke="#79DFEC" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 1H17L24 8V26H4ZM17 1V8H24M8 13H19M8 18H19M8 23H15"/></g>
+<text x="537" y="383" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600" fill="#79DFEC" text-anchor="start">DJANGO</text>
+<text x="474" y="434" font-family="Segoe UI, Arial, sans-serif" font-size="27" font-weight="600" fill="white" text-anchor="start">Contract Creator</text>
+<path d="M474 451H826" fill="none" stroke="#3A7187" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" />
+<circle cx="478" cy="497" r="2.5" fill="#79DFEC"/>
+<text x="492" y="503" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="600" fill="#FFFFFF" text-anchor="start">Preparation &amp; pricing</text>
+<circle cx="478" cy="559" r="2.5" fill="#79DFEC"/>
+<text x="492" y="565" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="600" fill="#FFFFFF" text-anchor="start">Issuance &amp; revisions</text>
+<circle cx="478" cy="621" r="2.5" fill="#79DFEC"/>
+<text x="492" y="627" font-family="Segoe UI, Arial, sans-serif" font-size="19" font-weight="600" fill="#FFFFFF" text-anchor="start">Access &amp; follow-up</text>
+<path d="M960 430V590C960 625 1230 625 1230 590V430Z" fill="white" stroke="#8CA7BD" stroke-width="1.5"/>
+<ellipse cx="1095" cy="430" rx="135" ry="27" fill="#E0F1F7" stroke="#247BA4" stroke-width="1.5"/>
+<text x="1095" y="437" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="600" fill="#102B46" text-anchor="middle">SQLite</text>
+<text x="1095" y="489" font-family="Segoe UI, Arial, sans-serif" font-size="20" font-weight="600" fill="#102B46" text-anchor="middle">Application records</text>
+<text x="1095" y="539" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" fill="#37536D" text-anchor="middle">Contracts · versions · follow-up</text>
+<path d="M50 820H325L350 845V985H50Z" fill="white" stroke="#8CA7BD" stroke-width="1.5"/>
+<path d="M325 820V845H350" fill="none" stroke="#8CA7BD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+<g transform="translate(70,840)" fill="none" stroke="#1688A6" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 1H17L24 8V26H4ZM17 1V8H24M8 13H19M8 18H19M8 23H15"/></g>
+<text x="70" y="898" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="600" fill="#102B46" text-anchor="start">Word templates</text>
+<text x="70" y="929" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" fill="#37536D" text-anchor="start">Clauses · annexes · layout</text>
+<path d="M500 820H775L800 845V985H500Z" fill="white" stroke="#8CA7BD" stroke-width="1.5"/>
+<path d="M775 820V845H800" fill="none" stroke="#8CA7BD" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+<g transform="translate(520,840)" fill="none" stroke="#1688A6" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 1H17L24 8V26H4ZM17 1V8H24M8 13H19M8 18H19M8 23H15"/></g>
+<text x="520" y="898" font-family="Segoe UI, Arial, sans-serif" font-size="21" font-weight="600" fill="#102B46" text-anchor="start">Document assembly</text>
+<text x="520" y="929" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600" fill="#247BA4" text-anchor="start">Word-template engine</text>
+<path d="M983 866C965 866 954 852 959 835C962 821 973 814 986 815C990 788 1027 780 1044 802C1062 787 1090 797 1095 818C1114 810 1138 823 1138 843C1138 858 1128 867 1112 867Z" fill="#E0F1F7" stroke="#247BA4" stroke-width="1.5"/>
+<rect x="960" y="855" width="270" height="130" rx="10" fill="white" stroke="#A7BDCF"/>
+<text x="980" y="892" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="600" fill="#102B46" text-anchor="start">OneDrive</text>
+<text x="980" y="927" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="600" fill="#247BA4" text-anchor="start">Graph · PDF conversion</text>
+<text x="980" y="957" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="400" fill="#37536D" text-anchor="start">Versioned PDF storage</text>
+<path d="M380 168H500V330" fill="none" stroke="#247BA4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M960 168H800V330" fill="none" stroke="#247BA4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M350 505H450" fill="none" stroke="#247BA4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+<rect x="374.0" y="474" width="52" height="24" rx="4" fill="#F5F8FC" stroke="none"/>
+<text x="400" y="490" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="500" fill="#45647A" text-anchor="middle">HTML</text>
+<path d="M850 505H960" fill="none" stroke="#247BA4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)" marker-start="url(#arrow)"/>
+<rect x="854.0" y="474" width="102" height="24" rx="4" fill="#F5F8FC" stroke="none"/>
+<text x="905" y="490" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="500" fill="#45647A" text-anchor="middle">Read / write</text>
+<path d="M650 700V820" fill="none" stroke="#247BA4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M350 910H500" fill="none" stroke="#247BA4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M800 910H960" fill="none" stroke="#247BA4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="850.0" y="879" width="60" height="24" rx="4" fill="#F5F8FC" stroke="none"/>
+<text x="880" y="895" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="500" fill="#45647A" text-anchor="middle">DOCX</text>
+<path d="M1095 818V745H900V585H850" fill="none" stroke="#247BA4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="922.5" y="729" width="155" height="24" rx="4" fill="#F5F8FC" stroke="none"/>
+<text x="1000" y="745" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="500" fill="#45647A" text-anchor="middle">PDF / file reference</text>
+</svg>

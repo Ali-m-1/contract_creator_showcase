@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="122" height="28" viewBox="0 0 122 28" role="img" aria-label="Tailwind CSS">
+  <rect x="0.5" y="0.5" width="121" height="27" rx="7" fill="#10263b" stroke="#28516b"/>
+  <circle cx="13" cy="14" r="3" fill="#67e8f9"/>
+  <text x="68.0" y="18.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" fill="#e2f4fc">Tailwind CSS</text>
+</svg>

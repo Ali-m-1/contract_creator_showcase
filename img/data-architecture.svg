@@ -1,0 +1,334 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3010" height="1870" viewBox="0 0 3010 1870" role="img" aria-labelledby="title desc"><title id="title">Contract Creator — Architecture des données</title><desc id="desc">Supplied reference-data and application schema, restyled in navy and cyan with unchanged entities, attributes and relationships.</desc><rect width="3010" height="1870" fill="#F5F8FC"/>
+<rect x="35.0" y="460.0" width="325.0" height="900.0" fill="#EDF3F8" stroke="#9DB3C8" stroke-width="1.5"/>
+<text x="197.5" y="481.0" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="bold" font-style="normal" fill="#102B46">Sources ERP</text>
+<rect x="460.0" y="65.0" width="875.0" height="285.0" fill="#EDF3F8" stroke="#9DB3C8" stroke-width="1.5"/>
+<text x="897.5" y="86.0" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="bold" font-style="normal" fill="#102B46">Tables de paramétrage de l’application</text>
+<rect x="460.0" y="385.0" width="875.0" height="1015.0" fill="#EDF3F8" stroke="#9DB3C8" stroke-width="1.5"/>
+<text x="897.5" y="406.0" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="bold" font-style="normal" fill="#102B46">Tables Excel normalisées</text>
+<rect x="1460.0" y="65.0" width="1510.0" height="1335.0" fill="#EDF3F8" stroke="#9DB3C8" stroke-width="1.5"/>
+<text x="2215.0" y="86.0" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="bold" font-style="normal" fill="#102B46">Base applicative Django / SQLite</text>
+<rect x="1460.0" y="1460.0" width="1510.0" height="345.0" fill="#EDF3F8" stroke="#9DB3C8" stroke-width="1.5"/>
+<text x="2215.0" y="1481.0" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="bold" font-style="normal" fill="#102B46">Connexion et stockage documentaire</text>
+<polyline points="330,580 900,580 900,585 960,585" fill="none" stroke="#236C9B" stroke-width="2.1" stroke-linejoin="round" stroke-dasharray="5 4"/>
+<polygon points="960,585 950,590 950,580" fill="#236C9B"/>
+<polyline points="345,728 920,728 920,695 960,695" fill="none" stroke="#236C9B" stroke-width="2.1" stroke-linejoin="round" stroke-dasharray="5 4"/>
+<polygon points="960,695 950,700 950,690" fill="#236C9B"/>
+<polyline points="315,892 485,892" fill="none" stroke="#236C9B" stroke-width="2.1" stroke-linejoin="round" stroke-dasharray="5 4"/>
+<polygon points="485,892 475,897 475,887" fill="#236C9B"/>
+<polyline points="330,1234 960,1234" fill="none" stroke="#236C9B" stroke-width="2.1" stroke-linejoin="round" stroke-dasharray="5 4"/>
+<polygon points="960,1234 950,1239 950,1229" fill="#236C9B"/>
+<polyline points="210,1190 210,1060 410,1060 410,970 485,970" fill="none" stroke="#236C9B" stroke-width="2.1" stroke-linejoin="round" stroke-dasharray="5 4"/>
+<polygon points="485,970 475,975 475,965" fill="#236C9B"/>
+<polyline points="825,835 880,835 880,750 960,750" fill="none" stroke="#236C9B" stroke-width="2.1" stroke-linejoin="round"/>
+<polyline points="834,828 834,842" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="840,828 840,842" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="960,757 946,750" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="960,750 946,750" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="960,743 946,750" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="825,975 880,975 880,1160 960,1160" fill="none" stroke="#236C9B" stroke-width="2.1" stroke-linejoin="round"/>
+<polyline points="834,968 834,982" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="840,968 840,982" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="960,1167 946,1160" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="960,1160 946,1160" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="960,1153 946,1160" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="805,220 870,220 870,355 1250,355 1250,435" fill="none" stroke="#236C9B" stroke-width="2.1" stroke-linejoin="round"/>
+<polyline points="814,213 814,227" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="820,213 820,227" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="1243,435 1250,421" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="1250,435 1250,421" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="1257,435 1250,421" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="650,795 650,370 1130,370 1130,326" fill="none" stroke="#236C9B" stroke-width="2.1" stroke-linejoin="round" stroke-dasharray="5 4"/>
+<polygon points="1130,326 1135,336 1125,336" fill="#236C9B"/>
+<polyline points="825,905 1415,905 1415,905 1500,905" fill="none" stroke="#236C9B" stroke-width="2.1" stroke-linejoin="round" stroke-dasharray="5 4"/>
+<polygon points="1500,905 1490,910 1490,900" fill="#236C9B"/>
+<polyline points="2350,215 2500,215" fill="none" stroke="#236C9B" stroke-width="2.1" stroke-linejoin="round"/>
+<polyline points="2359,208 2359,222" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="2365,208 2365,222" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="2491,222 2491,208" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="2485,222 2485,208" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="2000,215 1710,215 1710,560" fill="none" stroke="#236C9B" stroke-width="2.1" stroke-linejoin="round"/>
+<polyline points="1991,222 1991,208" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="1985,222 1985,208" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="1703,560 1710,546" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="1710,560 1710,546" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="1717,560 1710,546" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="2150,344 2150,560" fill="none" stroke="#236C9B" stroke-width="2.1" stroke-linejoin="round"/>
+<polyline points="2157,353 2143,353" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="2157,359 2143,359" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="2143,560 2150,546" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="2150,560 2150,546" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="2157,560 2150,546" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="2260,344 2260,440 2760,440 2760,560" fill="none" stroke="#236C9B" stroke-width="2.1" stroke-linejoin="round"/>
+<polyline points="2267,353 2253,353" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="2267,359 2253,359" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="2753,560 2760,546" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="2760,560 2760,546" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="2767,560 2760,546" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="2350,295 2440,295 2440,925 2210,925 2210,1000" fill="none" stroke="#236C9B" stroke-width="2.1" stroke-linejoin="round"/>
+<polyline points="2359,288 2359,302" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="2365,288 2365,302" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="2203,1000 2210,986" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="2210,1000 2210,986" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="2217,1000 2210,986" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="1920,695 2010,695" fill="none" stroke="#236C9B" stroke-width="2.1" stroke-linejoin="round"/>
+<polyline points="1929,688 1929,702" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<circle cx="1941.0" cy="695.0" r="5" fill="white" stroke="#236C9B" stroke-width="1.65"/>
+<polyline points="2010,702 1996,695" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="2010,695 1996,695" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="2010,688 1996,695" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="1920,1070 2010,1070" fill="none" stroke="#236C9B" stroke-width="2.1" stroke-linejoin="round"/>
+<polyline points="1929,1063 1929,1077" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="1935,1063 1935,1077" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="2010,1077 1996,1070" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="2010,1070 1996,1070" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="2010,1063 1996,1070" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="1920,1110 1960,1110 1960,1350 2460,1350 2460,1075 2500,1075" fill="none" stroke="#236C9B" stroke-width="2.1" stroke-linejoin="round"/>
+<polyline points="1929,1103 1929,1117" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="1935,1103 1935,1117" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="2500,1082 2486,1075" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="2500,1075 2486,1075" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="2500,1068 2486,1075" fill="none" stroke="#236C9B" stroke-width="1.65" stroke-linejoin="round"/>
+<polyline points="1950,1650 2500,1650" fill="none" stroke="#236C9B" stroke-width="2.1" stroke-linejoin="round" stroke-dasharray="5 4"/>
+<polygon points="2500,1650 2490,1655 2490,1645" fill="#236C9B"/>
+<polyline points="1710,1119 1710,1430 2580,1430 2580,1590" fill="none" stroke="#236C9B" stroke-width="2.1" stroke-linejoin="round" stroke-dasharray="5 4"/>
+<polygon points="2580,1590 2575,1580 2585,1580" fill="#236C9B"/>
+<polyline points="2790,1093 2790,1590" fill="none" stroke="#236C9B" stroke-width="2.1" stroke-linejoin="round" stroke-dasharray="5 4"/>
+<polygon points="2790,1590 2785,1580 2795,1580" fill="#236C9B"/>
+<rect x="485.0" y="115.0" width="320.0" height="191.0" fill="#FFFFFF" stroke="#718DA7" stroke-width="1.6"/>
+<rect x="485.0" y="115.0" width="320.0" height="47.0" fill="#102B46" stroke="none" stroke-width="1"/>
+<text x="645.0" y="144.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="bold" font-style="normal" fill="#FFFFFF">modality_table.xlsx</text>
+<polyline points="511,162 779,162" fill="none" stroke="#22B8D6" stroke-width="1.65" stroke-linejoin="round"/>
+<text x="645.0" y="186.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">PK  Modality</text>
+<text x="645.0" y="209.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">Name</text>
+<text x="645.0" y="232.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">Exclusions</text>
+<text x="645.0" y="255.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">Periodicity</text>
+<rect x="960.0" y="115.0" width="340.0" height="211.0" fill="#FFFFFF" stroke="#718DA7" stroke-width="1.6"/>
+<rect x="960.0" y="115.0" width="340.0" height="47.0" fill="#102B46" stroke="none" stroke-width="1"/>
+<text x="1130.0" y="144.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="bold" font-style="normal" fill="#FFFFFF">pricing/{TYPE}.xlsx</text>
+<polyline points="986,162 1274,162" fill="none" stroke="#22B8D6" stroke-width="1.65" stroke-linejoin="round"/>
+<text x="1130.0" y="186.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">PK  Modality</text>
+<text x="1130.0" y="209.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">with</text>
+<text x="1130.0" y="232.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">without</text>
+<text x="1130.0" y="255.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">mo</text>
+<rect x="960.0" y="435.0" width="340.0" height="329.0" fill="#FFFFFF" stroke="#718DA7" stroke-width="1.6"/>
+<rect x="960.0" y="435.0" width="340.0" height="47.0" fill="#102B46" stroke="none" stroke-width="1"/>
+<text x="1130.0" y="464.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="bold" font-style="normal" fill="#FFFFFF">equipment_master_table.xlsx</text>
+<polyline points="986,482 1274,482" fill="none" stroke="#22B8D6" stroke-width="1.65" stroke-linejoin="round"/>
+<text x="1130.0" y="506.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">PK  Equipment ID</text>
+<text x="1130.0" y="529.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">REF  ERP Client</text>
+<text x="1130.0" y="552.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">REF  Modality</text>
+<text x="1130.0" y="575.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">Designation</text>
+<text x="1130.0" y="598.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">Model</text>
+<text x="1130.0" y="621.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">Brand</text>
+<text x="1130.0" y="644.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">Serial Number</text>
+<text x="1130.0" y="667.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">Acquisition Price</text>
+<text x="1130.0" y="690.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">Warranty Start</text>
+<text x="1130.0" y="713.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">Warranty End</text>
+<text x="1130.0" y="736.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">Deal Number</text>
+<rect x="485.0" y="795.0" width="340.0" height="214.0" fill="#FFFFFF" stroke="#718DA7" stroke-width="1.6"/>
+<rect x="485.0" y="795.0" width="340.0" height="47.0" fill="#102B46" stroke="none" stroke-width="1"/>
+<text x="655.0" y="824.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="bold" font-style="normal" fill="#FFFFFF">client_table.xlsx</text>
+<polyline points="511,842 799,842" fill="none" stroke="#22B8D6" stroke-width="1.65" stroke-linejoin="round"/>
+<text x="655.0" y="866.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">PK  N° client</text>
+<text x="655.0" y="889.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">Internal Client</text>
+<text x="655.0" y="912.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">Nom</text>
+<text x="655.0" y="935.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">Ville</text>
+<text x="655.0" y="958.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">Pays</text>
+<text x="655.0" y="981.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">Type</text>
+<rect x="960.0" y="1100.0" width="340.0" height="234.0" fill="#FFFFFF" stroke="#718DA7" stroke-width="1.6"/>
+<rect x="960.0" y="1100.0" width="340.0" height="47.0" fill="#102B46" stroke="none" stroke-width="1"/>
+<text x="1130.0" y="1129.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="bold" font-style="normal" fill="#FFFFFF">contract_history.xlsx</text>
+<polyline points="986,1147 1274,1147" fill="none" stroke="#22B8D6" stroke-width="1.65" stroke-linejoin="round"/>
+<text x="1130.0" y="1171.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">REF  N° client</text>
+<text x="1130.0" y="1194.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">Internal Client</text>
+<text x="1130.0" y="1217.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">Year</text>
+<text x="1130.0" y="1240.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">Sequence</text>
+<text x="1130.0" y="1283.1" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="15.0" font-weight="normal" font-style="italic" fill="#213B52">Clé logique : client + année</text>
+<text x="1130.0" y="1306.1" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="15.0" font-weight="normal" font-style="italic" fill="#213B52">+ séquence</text>
+<rect x="65.0" y="540.0" width="265.0" height="85.0" fill="#FFFFFF" stroke="#718DA7" stroke-width="1.6"/>
+<rect x="65.0" y="540.0" width="265.0" height="39.0" fill="#102B46" stroke="none" stroke-width="1"/>
+<text x="197.5" y="569.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="bold" font-style="normal" fill="#FFFFFF">installed_based.xlsx</text>
+<text x="197.5" y="596.1" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="15.0" font-weight="normal" font-style="italic" fill="#213B52">Export ERP</text>
+<rect x="50.0" y="685.0" width="295.0" height="85.0" fill="#FFFFFF" stroke="#718DA7" stroke-width="1.6"/>
+<rect x="50.0" y="685.0" width="295.0" height="39.0" fill="#102B46" stroke="none" stroke-width="1"/>
+<text x="197.5" y="714.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="bold" font-style="normal" fill="#FFFFFF">contrats_de_services_lignes.xlsx</text>
+<text x="197.5" y="741.1" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="15.0" font-weight="normal" font-style="italic" fill="#213B52">Export ERP</text>
+<rect x="85.0" y="850.0" width="230.0" height="85.0" fill="#FFFFFF" stroke="#718DA7" stroke-width="1.6"/>
+<rect x="85.0" y="850.0" width="230.0" height="39.0" fill="#102B46" stroke="none" stroke-width="1"/>
+<text x="200.0" y="879.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="bold" font-style="normal" fill="#FFFFFF">Clients.xlsx</text>
+<text x="200.0" y="906.1" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="15.0" font-weight="normal" font-style="italic" fill="#213B52">Export ERP</text>
+<rect x="65.0" y="1190.0" width="265.0" height="85.0" fill="#FFFFFF" stroke="#718DA7" stroke-width="1.6"/>
+<rect x="65.0" y="1190.0" width="265.0" height="39.0" fill="#102B46" stroke="none" stroke-width="1"/>
+<text x="197.5" y="1219.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="bold" font-style="normal" fill="#FFFFFF">contrats_de_service.xlsx</text>
+<text x="197.5" y="1246.1" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="15.0" font-weight="normal" font-style="italic" fill="#213B52">Export ERP</text>
+<rect x="2000.0" y="130.0" width="350.0" height="214.0" fill="#FFFFFF" stroke="#718DA7" stroke-width="1.6"/>
+<rect x="2000.0" y="130.0" width="350.0" height="47.0" fill="#102B46" stroke="none" stroke-width="1"/>
+<text x="2175.0" y="159.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="bold" font-style="normal" fill="#FFFFFF">auth_user</text>
+<polyline points="2026,177 2324,177" fill="none" stroke="#22B8D6" stroke-width="1.65" stroke-linejoin="round"/>
+<text x="2175.0" y="201.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">PK  id</text>
+<text x="2175.0" y="224.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">username</text>
+<text x="2175.0" y="247.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">password</text>
+<text x="2175.0" y="270.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">is_active</text>
+<text x="2175.0" y="293.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">is_staff</text>
+<text x="2175.0" y="316.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">is_superuser</text>
+<rect x="2500.0" y="130.0" width="420.0" height="214.0" fill="#FFFFFF" stroke="#718DA7" stroke-width="1.6"/>
+<rect x="2500.0" y="130.0" width="420.0" height="47.0" fill="#102B46" stroke="none" stroke-width="1"/>
+<text x="2710.0" y="159.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="bold" font-style="normal" fill="#FFFFFF">contracts_userprofile</text>
+<polyline points="2526,177 2894,177" fill="none" stroke="#22B8D6" stroke-width="1.65" stroke-linejoin="round"/>
+<text x="2710.0" y="201.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">PK  id</text>
+<text x="2710.0" y="224.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">FK / UQ  user_id</text>
+<text x="2710.0" y="247.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">role</text>
+<text x="2710.0" y="270.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">preferred_language</text>
+<text x="2710.0" y="293.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">created_at</text>
+<text x="2710.0" y="316.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">updated_at</text>
+<rect x="1500.0" y="560.0" width="420.0" height="559.0" fill="#FFFFFF" stroke="#718DA7" stroke-width="1.6"/>
+<rect x="1500.0" y="560.0" width="420.0" height="47.0" fill="#102B46" stroke="none" stroke-width="1"/>
+<text x="1710.0" y="589.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="bold" font-style="normal" fill="#FFFFFF">contracts_contractrecord</text>
+<polyline points="1526,607 1894,607" fill="none" stroke="#22B8D6" stroke-width="1.65" stroke-linejoin="round"/>
+<text x="1710.0" y="631.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">PK  id</text>
+<text x="1710.0" y="654.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">UQ  reference</text>
+<text x="1710.0" y="677.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">FK  creator_id</text>
+<text x="1710.0" y="700.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">client_id</text>
+<text x="1710.0" y="723.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">client_name</text>
+<text x="1710.0" y="746.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">contract_type</text>
+<text x="1710.0" y="769.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">start_date</text>
+<text x="1710.0" y="792.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">currency</text>
+<text x="1710.0" y="815.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">annual_ht</text>
+<text x="1710.0" y="838.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">tva_rate</text>
+<text x="1710.0" y="861.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">annual_ttc</text>
+<text x="1710.0" y="884.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">current_version</text>
+<text x="1710.0" y="907.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">status</text>
+<text x="1710.0" y="930.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">custom_pricing_used</text>
+<text x="1710.0" y="953.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">snapshot (JSON)</text>
+<text x="1710.0" y="976.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">storage_item_id</text>
+<text x="1710.0" y="999.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">storage_web_url</text>
+<text x="1710.0" y="1022.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">output_filename</text>
+<text x="1710.0" y="1045.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">qr_token</text>
+<text x="1710.0" y="1068.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">created_at</text>
+<text x="1710.0" y="1091.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">updated_at</text>
+<rect x="2500.0" y="560.0" width="420.0" height="533.0" fill="#FFFFFF" stroke="#718DA7" stroke-width="1.6"/>
+<rect x="2500.0" y="560.0" width="420.0" height="47.0" fill="#102B46" stroke="none" stroke-width="1"/>
+<text x="2710.0" y="589.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="bold" font-style="normal" fill="#FFFFFF">contracts_contractrevision</text>
+<polyline points="2526,607 2894,607" fill="none" stroke="#22B8D6" stroke-width="1.65" stroke-linejoin="round"/>
+<text x="2710.0" y="631.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">PK  id</text>
+<text x="2710.0" y="654.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">FK  contract_id</text>
+<text x="2710.0" y="677.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">FK  created_by_id</text>
+<text x="2710.0" y="700.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">version</text>
+<text x="2710.0" y="723.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">reason</text>
+<text x="2710.0" y="746.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">status</text>
+<text x="2710.0" y="769.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">requested_format</text>
+<text x="2710.0" y="792.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">currency</text>
+<text x="2710.0" y="815.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">annual_ht</text>
+<text x="2710.0" y="838.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">tva_rate</text>
+<text x="2710.0" y="861.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">annual_ttc</text>
+<text x="2710.0" y="884.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">snapshot (JSON)</text>
+<text x="2710.0" y="907.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">changes (JSON)</text>
+<text x="2710.0" y="930.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">storage_item_id</text>
+<text x="2710.0" y="953.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">storage_web_url</text>
+<text x="2710.0" y="976.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">output_filename</text>
+<text x="2710.0" y="999.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">created_at</text>
+<text x="2710.0" y="1022.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">updated_at</text>
+<text x="2710.0" y="1065.1" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="15.0" font-weight="normal" font-style="italic" fill="#213B52">UQ : contract_id + version</text>
+<rect x="2010.0" y="560.0" width="365.0" height="260.0" fill="#FFFFFF" stroke="#718DA7" stroke-width="1.6"/>
+<rect x="2010.0" y="560.0" width="365.0" height="47.0" fill="#102B46" stroke="none" stroke-width="1"/>
+<text x="2192.5" y="589.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="bold" font-style="normal" fill="#FFFFFF">contracts_notification</text>
+<polyline points="2036,607 2349,607" fill="none" stroke="#22B8D6" stroke-width="1.65" stroke-linejoin="round"/>
+<text x="2192.5" y="631.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">PK  id</text>
+<text x="2192.5" y="654.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">FK  recipient_id</text>
+<text x="2192.5" y="677.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">FK  contract_id (facultatif)</text>
+<text x="2192.5" y="700.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">kind</text>
+<text x="2192.5" y="723.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">title</text>
+<text x="2192.5" y="746.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">message</text>
+<text x="2192.5" y="769.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">read_at</text>
+<text x="2192.5" y="792.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">created_at</text>
+<rect x="2010.0" y="1000.0" width="400.0" height="260.0" fill="#FFFFFF" stroke="#718DA7" stroke-width="1.6"/>
+<rect x="2010.0" y="1000.0" width="400.0" height="47.0" fill="#102B46" stroke="none" stroke-width="1"/>
+<text x="2210.0" y="1029.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="bold" font-style="normal" fill="#FFFFFF">contracts_pricingoverride</text>
+<polyline points="2036,1047 2384,1047" fill="none" stroke="#22B8D6" stroke-width="1.65" stroke-linejoin="round"/>
+<text x="2210.0" y="1071.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">PK  id</text>
+<text x="2210.0" y="1094.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">FK  contract_id</text>
+<text x="2210.0" y="1117.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">FK  changed_by_id</text>
+<text x="2210.0" y="1140.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">equipment_id</text>
+<text x="2210.0" y="1163.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">default_rate</text>
+<text x="2210.0" y="1186.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">applied_rate</text>
+<text x="2210.0" y="1209.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">applied_price</text>
+<text x="2210.0" y="1232.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">created_at</text>
+<rect x="1500.0" y="1510.0" width="450.0" height="237.0" fill="#FFFFFF" stroke="#718DA7" stroke-width="1.6"/>
+<rect x="1500.0" y="1510.0" width="450.0" height="47.0" fill="#102B46" stroke="none" stroke-width="1"/>
+<text x="1725.0" y="1539.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="bold" font-style="normal" fill="#FFFFFF">contracts_storageconnection</text>
+<polyline points="1526,1557 1924,1557" fill="none" stroke="#22B8D6" stroke-width="1.65" stroke-linejoin="round"/>
+<text x="1725.0" y="1581.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">PK  id</text>
+<text x="1725.0" y="1604.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">UQ  provider</text>
+<text x="1725.0" y="1627.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">account_name</text>
+<text x="1725.0" y="1650.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">account_id</text>
+<text x="1725.0" y="1673.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">encrypted_token_cache</text>
+<text x="1725.0" y="1696.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">connected_at</text>
+<text x="1725.0" y="1719.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">updated_at</text>
+<rect x="2500.0" y="1590.0" width="420.0" height="135.0" fill="#FFFFFF" stroke="#718DA7" stroke-width="1.6"/>
+<rect x="2500.0" y="1590.0" width="420.0" height="39.0" fill="#102B46" stroke="none" stroke-width="1"/>
+<text x="2710.0" y="1619.44" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="bold" font-style="normal" fill="#FFFFFF">OneDrive</text>
+<text x="2710.0" y="1654.1" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="15.0" font-weight="normal" font-style="italic" fill="#213B52">PDF officiels versionnés</text>
+<text x="2710.0" y="1677.1" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="15.0" font-weight="normal" font-style="italic" fill="#213B52">Liens vers les documents</text>
+<rect x="568.8" y="568.0" width="82.4" height="23.0" fill="#EDF3F8" stroke="none" stroke-width="1"/>
+<text x="610.0" y="584.6" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="15.0" font-weight="normal" font-style="normal" fill="#19577C">alimente</text>
+<rect x="568.8" y="716.0" width="82.4" height="23.0" fill="#EDF3F8" stroke="none" stroke-width="1"/>
+<text x="610.0" y="732.6" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="15.0" font-weight="normal" font-style="normal" fill="#19577C">complète</text>
+<rect x="359.8" y="880.0" width="82.4" height="23.0" fill="#EDF3F8" stroke="none" stroke-width="1"/>
+<text x="401.0" y="896.6" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="15.0" font-weight="normal" font-style="normal" fill="#19577C">alimente</text>
+<rect x="688.8" y="1222.0" width="82.4" height="23.0" fill="#EDF3F8" stroke="none" stroke-width="1"/>
+<text x="730.0" y="1238.6" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="15.0" font-weight="normal" font-style="normal" fill="#19577C">alimente</text>
+<rect x="223.14999999999998" y="1048.0" width="173.70000000000002" height="23.0" fill="#EDF3F8" stroke="none" stroke-width="1"/>
+<text x="310.0" y="1064.6" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="15.0" font-weight="normal" font-style="normal" fill="#19577C">identifiant interne</text>
+<rect x="675.0" y="358.0" width="268.0" height="23.0" fill="#EDF3F8" stroke="none" stroke-width="1"/>
+<text x="809.0" y="374.6" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="15.0" font-weight="normal" font-style="normal" fill="#19577C">Type sélectionne le fichier du pricing</text>
+<rect x="1039.0" y="893.0" width="182.0" height="23.0" fill="#EDF3F8" stroke="none" stroke-width="1"/>
+<text x="1130.0" y="909.6" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="15.0" font-weight="normal" font-style="normal" fill="#19577C">client_id · snapshot</text>
+<rect x="1760.5" y="203.0" width="99.0" height="23.0" fill="#EDF3F8" stroke="none" stroke-width="1"/>
+<text x="1810.0" y="219.6" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="15.0" font-weight="normal" font-style="normal" fill="#19577C">creator_id</text>
+<rect x="2092.2" y="453.0" width="115.60000000000001" height="23.0" fill="#EDF3F8" stroke="none" stroke-width="1"/>
+<text x="2150.0" y="469.6" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="15.0" font-weight="normal" font-style="normal" fill="#19577C">recipient_id</text>
+<rect x="2558.05" y="428.0" width="123.9" height="23.0" fill="#EDF3F8" stroke="none" stroke-width="1"/>
+<text x="2620.0" y="444.6" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="15.0" font-weight="normal" font-style="normal" fill="#19577C">created_by_id</text>
+<rect x="2248.05" y="913.0" width="123.9" height="23.0" fill="#EDF3F8" stroke="none" stroke-width="1"/>
+<text x="2310.0" y="929.6" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="15.0" font-weight="normal" font-style="normal" fill="#19577C">changed_by_id</text>
+<rect x="2178.8" y="1338.0" width="82.4" height="23.0" fill="#EDF3F8" stroke="none" stroke-width="1"/>
+<text x="2220.0" y="1354.6" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="15.0" font-weight="normal" font-style="normal" fill="#19577C">versions</text>
+<rect x="2149.75" y="1638.0" width="140.5" height="23.0" fill="#EDF3F8" stroke="none" stroke-width="1"/>
+<text x="2220.0" y="1654.6" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="15.0" font-weight="normal" font-style="normal" fill="#19577C">Microsoft Graph</text>
+<rect x="2035.6" y="1418.0" width="148.8" height="23.0" fill="#EDF3F8" stroke="none" stroke-width="1"/>
+<text x="2110.0" y="1434.6" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="15.0" font-weight="normal" font-style="normal" fill="#19577C">Document courant</text>
+<rect x="2736.35" y="1488.0" width="107.30000000000001" height="23.0" fill="#EDF3F8" stroke="none" stroke-width="1"/>
+<text x="2790.0" y="1504.6" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="15.0" font-weight="normal" font-style="normal" fill="#19577C">PDF V1, V2…</text>
+<text x="1505.0" y="41.32" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="23.0" font-weight="bold" font-style="normal" fill="#213B52">Architecture des données </text>
+<text x="895.0" y="1473.6" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="15.0" font-weight="normal" font-style="normal" fill="#213B52">Les tarifs courants sont sélectionnés par le Type du client.</text>
+<text x="2210.0" y="1838.6" text-anchor="middle" font-family="Trebuchet MS, Arial, sans-serif" font-size="15.0" font-weight="normal" font-style="normal" fill="#213B52">La connexion OneDrive est globale : aucune clé étrangère vers les contrats.</text>
+<rect x="460.0" y="1535.0" width="875.0" height="270.0" fill="#FFFFFF" stroke="#9DB3C8" stroke-width="1.5"/>
+<text x="489.0" y="1564.12" text-anchor="start" font-family="Trebuchet MS, Arial, sans-serif" font-size="18.0" font-weight="bold" font-style="normal" fill="#213B52">Légende</text>
+<text x="489.0" y="1594.44" text-anchor="start" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="bold" font-style="normal" fill="#213B52">Champs</text>
+<text x="939.0" y="1594.44" text-anchor="start" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="bold" font-style="normal" fill="#213B52">Cardinalités</text>
+<text x="489.0" y="1624.44" text-anchor="start" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="bold" font-style="normal" fill="#213B52">PK</text>
+<text x="549.0" y="1624.44" text-anchor="start" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">Identifiant</text>
+<text x="489.0" y="1653.44" text-anchor="start" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="bold" font-style="normal" fill="#213B52">REF</text>
+<text x="549.0" y="1653.44" text-anchor="start" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">Référence logique Excel</text>
+<text x="489.0" y="1682.44" text-anchor="start" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="bold" font-style="normal" fill="#213B52">FK</text>
+<text x="549.0" y="1682.44" text-anchor="start" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">Clé étrangère SQL</text>
+<text x="489.0" y="1711.44" text-anchor="start" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="bold" font-style="normal" fill="#213B52">UQ</text>
+<text x="549.0" y="1711.44" text-anchor="start" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">Valeur ou combinaison unique</text>
+<polyline points="935,1620 1000,1620" fill="none" stroke="#236C9B" stroke-width="2.1" stroke-linejoin="round"/>
+<polyline points="989,1611 989,1629" fill="none" stroke="#236C9B" stroke-width="2.1" stroke-linejoin="round"/>
+<text x="1024.0" y="1624.44" text-anchor="start" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">Un (1)</text>
+<polyline points="935,1654 1000,1654" fill="none" stroke="#236C9B" stroke-width="2.1" stroke-linejoin="round"/>
+<polyline points="979,1654 1000,1645" fill="none" stroke="#236C9B" stroke-width="2.1" stroke-linejoin="round"/>
+<polyline points="979,1654 1000,1663" fill="none" stroke="#236C9B" stroke-width="2.1" stroke-linejoin="round"/>
+<text x="1024.0" y="1658.44" text-anchor="start" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">Plusieurs (N)</text>
+<polyline points="935,1688 1000,1688" fill="none" stroke="#236C9B" stroke-width="2.1" stroke-linejoin="round"/>
+<polyline points="989,1679 989,1697" fill="none" stroke="#236C9B" stroke-width="2.1" stroke-linejoin="round"/>
+<ellipse cx="970.0" cy="1688.0" rx="6.0" ry="6.0" fill="#FFFFFF" stroke="#236C9B" stroke-width="1.8"/>
+<text x="1024.0" y="1692.44" text-anchor="start" font-family="Trebuchet MS, Arial, sans-serif" font-size="16.0" font-weight="normal" font-style="normal" fill="#213B52">Zéro ou un (0..1)</text>
+<polyline points="485,1748 545,1748" fill="none" stroke="#236C9B" stroke-width="2.1" stroke-linejoin="round" stroke-dasharray="5 4"/>
+<polygon points="545,1748 535,1753 535,1743" fill="#236C9B"/>
+<text x="564.0" y="1752.1" text-anchor="start" font-family="Trebuchet MS, Arial, sans-serif" font-size="15.0" font-weight="normal" font-style="normal" fill="#213B52">Flux : alimentation, sélection, stockage</text>
+<polyline points="935,1748 1000,1748" fill="none" stroke="#236C9B" stroke-width="2.1" stroke-linejoin="round"/>
+<text x="1024.0" y="1752.1" text-anchor="start" font-family="Trebuchet MS, Arial, sans-serif" font-size="15.0" font-weight="normal" font-style="normal" fill="#213B52">Relation entre tables</text>
+<text x="489.0" y="1783.1" text-anchor="start" font-family="Trebuchet MS, Arial, sans-serif" font-size="15.0" font-weight="normal" font-style="normal" fill="#213B52">Deux lignes croisées sans point de jonction restent indépendantes.</text>
+</svg>
